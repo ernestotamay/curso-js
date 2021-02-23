@@ -9,35 +9,43 @@
 
     <body>
         <h1>Calcular el volumen de un Cubo</h1>
-        Lado A: <input type="text" id="CajaTexto_LadoA" ><br>
-        Lado B: <input type="text" id="CajaTexto_LadoB" ><br>
-        Lado C: <input type="text" id="CajaTexto_LadoC" ><br>
-
+        
+        <!-- form agrupa elementos html correspondientes a un formulario-->
+        <form id="volumen">      
+            Lado A: <input type="number" id="CajaTexto_LadoA" ><br>
+            Lado B: <input type="number" id="CajaTexto_LadoB" ><br>
+            Lado C: <input type="number" id="CajaTexto_LadoC" ><br>
+        </form>
+        
+        
+        <!-- Boton invoca a la funcion calcular_volumen() -->
         <button onclick="calcular_volumen()">Calcular</button>
 
-        <p id="parrafo_resultado"></p>
-
+        <!-- div es una caja contenedora invisible -->
+        <div id="contenedor_resultado"></div>
+        
 
         <script>
+            //COMENTARIO JAVASCRIPT
+            //una funcion es un conjunto de instrucciones agrupadas
             function calcular_volumen(){
-                //convertir texto a numero y lo almacena en su respectiva variable
-                var LadoA = parseFloat(document.getElementById("CajaTexto_LadoA").value);
-                var LadoB = parseFloat(document.getElementById("CajaTexto_LadoB").value);
-                var LadoC = parseFloat(document.getElementById("CajaTexto_LadoC").value);
+                
+                //document se convierte en un objeto, cuando se carga la pagina web volumen.html
+                //getElementById se usa para obtener el elemento con el Id especificado
+                //value es el valor de la CajaInput_LadoA
+                
+                //lo anterior se interpreta:
+                //document obten el valor del elemento con id "CajaInput_LadoA" y guardalo en variable LadoA
+                var LadoA = document.getElementById("CajaInput_LadoA").value;
+                var LadoB = document.getElementById("CajaInput_LadoB").value;
+                var LadoC = document.getElementById("CajaInput_LadoC").value;
 
                 //calculo para obtener el volumen, la formula de volumen aplicada
                 var volumen = LadoA * LadoB * LadoC;
 
-                document.getElementById("parrafo_resultado").innerHTML = volumen;
+                //cambiar el contenido HTML del elemento "contenedor_resultado" por el contenido de la variable volumen
+                document.getElementById("contenedor_resultado").innerHTML = volumen;
             }
         </script>
-
-        Notas:
-        <ol>
-            <li>Objeto document</li>
-            <li>Metodo (Accion) getElementById, se puede interpretar como "obtener el Id del elemento"</li>
-            <li>parseFloat es una funcion que convierte el texto en número</li>
-
-        </ol>
     </body>
 </html>
