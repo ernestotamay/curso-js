@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mensajes desde document</title>
+    </head>
+
+    <body>
+        <h1>Mensajes con objeto document</h1>
+
+        <p>Presiona tecla F12 para inspeccionar elementos.</p>
+             
+        <p>Mensaje: </p>
+        
+        <div id="caja"></div>
+
+        <script>
+            //let mensaje = "Hola mundo desde objeto document!";
+            let animales = ["perro","gato","vaca","loro","mono","serpiente","pejelagarto"];
+            //salida en html
+            
+            //document es un objeto HTML
+            //getElementById se interpreta como obtener elemento por identificador "caja"
+            //innerHTML se interpreta como: insertar como HTML el contenido de la variable "mensaje"
+
+            document.getElementById("caja").innerHTML = animales.length;
+        </script>
+
+    </body>
+</html>

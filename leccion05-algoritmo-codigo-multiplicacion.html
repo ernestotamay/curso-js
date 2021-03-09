@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Algoritmo y código JS</title>
+    </head>
+
+    <body>
+        <h1>Algoritmo y código para multiplicación:</h1>
+
+        <p>El resultado de javascript se colocó dentro del elemento DIV con id="caja"</p>
+        El resultado es: <div id="caja"></div>
+
+        <script>
+            console.log("Declaracion de variables");
+            
+            //entrada
+            //declaracion de variables
+            
+            a = 2;
+            b = 12;
+            c = 200;
+            
+            //proceso
+            resultado = a * b * c;
+
+            //salida a consola
+            
+            console.log("a = " + a);
+            console.log("b = " + b);
+            console.log("c = " + c);
+
+            console.log("Multiplicar: a x b x c");
+
+            //salida por consola
+            console.log("resultado: " + resultado);          
+        
+            //salida para html
+            document.getElementById("caja").innerHTML = resultado;
+            
+            //salida por notificacion pop-up
+            alert("la respuesta es: " + resultado);
+
+        </script>
+
+    </body>
+</html>
