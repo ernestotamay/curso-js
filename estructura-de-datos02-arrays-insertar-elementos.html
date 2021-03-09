@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Array unidimensional - Insertar elementos
+    </title>
+
+    <body>
+        <h1>Array unidimensional</h1>
+
+        <form id="lista">
+            <label>Elemento</label>
+            <input type="text" id="InputText_Elemento">
+        </form>
+
+        <button onclick="insertar_elemento()">Agregar</button>
+
+        <div id="caja_array"></div>
+
+
+        <script>
+            //definicion de array: lista
+            let lista = [ ];
+
+            function insertar_elemento(){
+                
+
+
+                let elemento = document.getElementById("InputText_Elemento").value;
+                
+                //push se interpretar como "insertar elemento" en array
+                lista.push(elemento);                
+                
+                //imprimir todo el array "lista"
+                document.getElementById("caja_array").innerHTML = lista;
+                
+            }
+        </script>
+    </body>
+</html>
