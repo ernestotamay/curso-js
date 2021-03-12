@@ -1,0 +1,71 @@
+<!-- Esto es un comentario HTML -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays - Numeros aleatorios</title>
+    </head>    
+
+    <body>
+        <h1>Arrays</h1>   
+        <p>Numeros aleatorios</p>
+        
+        <br>
+        
+        <form id="sorteo_form">
+            <label>Partipante </label>
+            <input type="text" id="participante_input">
+        </form>
+        
+        <br>
+
+        <button onclick="registrar_participante()">Registrar</button>   
+        
+        <div id="participante_caja"></div>
+
+
+        <br>
+        <br>
+        <p>Presiona el botón sortear para elegir un ganador de forma aleatoria</p>
+        <button onclick="sortear_rifa()">Sortear</button>       
+        
+        <div id="ganador_caja"></div>
+
+        <br>
+        
+        <script>
+
+            let participantesLista = [ ];
+
+            function registrar_participante(){
+                let elemento = document.getElementById("participante_input").value
+
+                //inserta un elemento dentro del array
+                participantesLista.push(elemento);
+
+                document.getElementById("participante_caja").innerHTML = participantesLista;
+            }
+
+            function sortear_rifa(){
+                let longitud = participantesLista.length;
+                let ganador = aleatorio(0,longitud-1);
+                document.getElementById("ganador_caja").innerHTML = "GANADOR: " + participantesLista[ganador];
+            }
+            
+            function aleatorio(minimo, maximo) {
+                //floor hace redondeo
+                //random elige un numero decimal entre 0 y 1
+                //minimo es el menor de los datos numericos
+                //maximo es el mayor de los datos numericos
+
+                //este codigo surge de una formula de probabilidades
+                return Math.floor( Math.random() * (maximo - minimo + 1) + minimo );
+            }
+
+        </script>
+        
+        
+        
+        
+    </body>
+</html>
+
