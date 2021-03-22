@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            EXAMEN PARCIAL 1
+        </title>
+    </head>
+
+    <body>
+        <h1>EXAMEN PARCIAL 1</h1>
+        
+        <form id="rfc_form">      
+          <label>Iniciales</label>      
+          <input type="text" id="CajaInput_Iniciales" ><br>
+
+          <label>Año de nacimiento</label>      
+          <input type="number" id="CajaInput_Anio" ><br>
+
+          <label>Mes de nacimiento</label>      
+          <input type="number" id="CajaInput_Mes" ><br>
+
+          <label>Dia de nacimiento</label>      
+          <input type="number" id="CajaInput_Dia" ><br>
+
+          <label>Homoclave</label>      
+          <input type="text" id="CajaInput_Homoclave" ><br>
+
+        </form>
+
+        <button onclick="generar_rfc()">Generar RFC</button><br>
+
+        <!-- div es una caja contenedora invisible -->
+        <div id="contenedor_rfc"></div>
+
+
+
+        
+
+
+
+
+        
+        <script>
+            
+            
+            
+            function generar_rfc(){ 
+                let RFC = [ ];
+                
+                var Iniciales = document.getElementById("CajaInput_Iniciales").value;
+                var Anio = document.getElementById("CajaInput_Anio").value;
+                var Mes = document.getElementById("CajaInput_Mes").value;
+                var Dia = document.getElementById("CajaInput_Dia").value;
+                var Homoclave = document.getElementById("CajaInput_Homoclave").value;
+                                           
+                //rfc_generado = Iniciales + Anio + Mes + Dia + Homoclave;
+
+                RFC.push(Iniciales);
+                RFC.push(Anio);
+                RFC.push(Mes);
+                RFC.push(Dia);
+                RFC.push(Homoclave);
+            
+                document.getElementById("contenedor_rfc").innerHTML = RFC;
+            }
+
+            
+            
+        </script>
+
+        <!-- ESTA SOLUCION ES SIN UAR ARRAY; LA SOLUCION FUE POR MEDIO DE CONCATENAR CADENAS DE TEXTO
+        -->
+    </body>
+</html>
+
+
