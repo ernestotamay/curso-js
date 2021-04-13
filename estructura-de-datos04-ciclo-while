@@ -1,0 +1,34 @@
+//declaración y asignacion de un arreglo
+//var intereses = ["viajar","deportes","ciencia","conocer pesonas","musica"];
+
+//declaración de un arreglo vacio
+var intereses = [ ];
+var SI = true;
+var NO = false;
+var agregarInteres = null;
+
+//WHILE significa "mientras"
+//operador != significa "diferente"
+//agregar diferente de NO
+while (agregarInteres != NO) {
+
+    /*se ejecuta un ventana emergente que solicita
+    un interes y se alamcena en una variable llamada "interes" */
+    interes = prompt("escribe algun interes aqui: ");
+
+
+    //insertamos el nuevo interes dentro del arreglo llamado "intereses"
+    intereses.push(interes);
+
+
+    //EL CICLO FOR no se va a ejecutar hasta que termine el CICLO WHILE
+    //usar el ciclo for para imprimir todo el contenido del arreglo
+    for (let i = 0; i < intereses.length; i++) {
+        //imprimir cada posicion del arreglo
+        console.log(intereses[i]);
+    }
+
+    agregarInteres = confirm("¿Desea agregar otro interes a la lista?");
+}
+
+
