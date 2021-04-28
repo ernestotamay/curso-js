@@ -1,3 +1,6 @@
+//TABLA DE MULTIPLICAR 
+//EJEMPLO DE CICLO FOR
+
 var numero;
 var resultado;
 
